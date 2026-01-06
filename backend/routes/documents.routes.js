@@ -14,8 +14,8 @@ const {
 const storage = multer.diskStorage({
   destination: "uploads/",
   filename: (req, file, cb) => {
-    const ext = path.extname(file.originalname);        // .pdf
-    const baseName = path.basename(file.originalname, ext); // file name only
+    const ext = path.extname(file.originalname);      
+    const baseName = path.basename(file.originalname, ext); 
     const timestamp = Date.now();
 
     const newFileName = `${baseName}_${timestamp}${ext}`;
